@@ -6,7 +6,7 @@
 
 ## 개발 환경
 
-- Python v3.9
+- Python v3.9 64bit
 - selenuim v3.141.0
 - Google Chrome v87.xx 64bit
 
