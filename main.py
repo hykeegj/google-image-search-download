@@ -20,7 +20,7 @@ driver.get("https://www.google.co.kr/imghp?hl=ko&tab=wi&ogbl")
 # [구글 검색창 찾기] 구글 크롬 브라우저 접속 후, 개발자 도구(F12)를 눌러 구글 검색창의 요소 중 "name"="q"를 찾아 googleSearchElement 변수에 저장하고 커서를 위치시킨다.
 googleSearchElement = driver.find_element_by_name("q")
 
-# [검색어 입력] 구글 검색창에 원하는 검색어를 입력한다. 7번째 줄의 googleSearchKeyword 변수 참조
+# [검색어 입력] 구글 검색창에 원하는 검색어를 입력한다. 9번째 줄의 googleSearchKeyword 변수 참조
 googleSearchElement.send_keys(googleSearchKeyword)
 
 # [검색 결과 표시] Enter 키를 눌러 검색 결과를 표시한다.
