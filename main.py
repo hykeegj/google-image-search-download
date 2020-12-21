@@ -1,9 +1,11 @@
-from scrollBrowserToEnd import scrollBrowserToEnd
+import os
+import time
+
+import urllib.request
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import time
-import urllib.request
-import os
+
+from scrollBrowserToEnd import scrollBrowserToEnd
 
 # [원하는 검색어를 지정]
 googleSearchKeyword = "포도"
@@ -13,6 +15,9 @@ saveImageDirectory = f"./{googleSearchKeyword}"
 
 # [구글 크롬 웹 드라이버 초기 설정]
 driver = webdriver.Chrome()
+
+# [구글 크롬 웹 브라우저 초기 사이즈 조정] 1280x1024로 창 크기가 조정됨
+driver.set_window_size(1280, 1024)
 
 # [구글 이미지 검색 홈페이지 띄우기] 프로그램 시작 시, 첫 화면으로 띄워지길 원하는 웹사이트의 URL 주소를 get() 함수로 받아옴
 driver.get("https://www.google.co.kr/imghp?hl=ko&tab=wi&ogbl")
@@ -41,7 +46,7 @@ for index, image in enumerate(images):
         # [2초 기다림] 이미지 클릭 후 2초간 기다려서 로딩이 전부 완료될 때까지 기다린다.
         time.sleep(2)
 
-        # [이미지 URL 추출] 크롬 개발자 도구(F12)를 눌러 큰 이미지의 태그를 우 클릭 후 Copy -> Copy full XPath를 클릭하여 경로 복사 후, xpath로 찾은 다음 "src" 경로 요소를 얻기
+        # [이미지 URL 추출] 크롬 개발자 도구(F12)를 눌러 큰 이미지의 태그를 우클릭 후 Copy -> Copy full XPath를 클릭하여 경로 복사 후, xpath로 찾은 다음 "src" 경로 요소를 얻기
         imgURL = driver.find_element_by_xpath(
             "/html/body/div[2]/c-wiz/div[3]/div[2]/div[3]/div/div/div[3]/div[2]/c-wiz/div[1]/div[1]/div/div[2]/a/img").get_attribute("src")
 

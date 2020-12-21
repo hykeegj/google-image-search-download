@@ -1,4 +1,4 @@
-# 구글 이미지 크롤링 - 파이썬, 셀레니움
+# 구글 이미지 다운로더
 
 ## 개요
 
@@ -6,10 +6,15 @@
 
 ## 개발 환경
 
-- Python v3.9 64bit
-- selenuim v3.141.0
-- Google Chrome v87.xx 64bit
+- [Python](https://www.python.org/) v3.9.1 64bit
+- [selenuim](https://pypi.org/project/selenium/) v3.141.0
+
+  ```python
+  pip install -U selenium
+  ```
+
+- [ChromeDriver](https://chromedriver.chromium.org/) v87.0.4280.88
 
 ## 라이선스
 
-- MIT LICENSE
+- [MIT LICENSE](LICENSE)
